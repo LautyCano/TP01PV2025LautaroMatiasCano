@@ -9,9 +9,9 @@ body {
 
 /*encabezado*/
 header {
-    background-image: url(para_mati.PNG);
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url(para_mati.PNG); /* pone la imagende fondo*/
+    background-position: center; /* centra la imagen*/
+    background-repeat: no-repeat; /* evita que la imagen se repita*/
     background-size: cover;
     height: 160px;
     color: rgb(245, 242, 242);
@@ -86,21 +86,21 @@ section.tradiciones {
     }
 }
 
-section.carnaval {
+#carnaval {
     background-color: #7c6d53;
     padding: 15px;
     margin: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-section.pacha {
+#pacha {
     background-color: #6a4731;
     padding: 15px;
     margin: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-section.semana {
+#semana {
     background-color: #564230;
     padding: 15px;
     margin: 10px;
@@ -108,7 +108,7 @@ section.semana {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-section.galo {
+#galo {
     background-color: #564230;
     padding: 15px;
     margin: 10px;
@@ -117,7 +117,7 @@ section.galo {
     text-align: center;
     color: #ffffff;
 }
-section.pintura {
+#pintura {
     background-color: #6a4731;
     padding: 15px;
     margin: 10px;
@@ -127,7 +127,7 @@ section.pintura {
     color: #ffffff;
 }
 
-section.hornillo {
+#hornillo {
     background-color: #7c6d53;
     padding: 15px;
     margin: 10px;
@@ -137,7 +137,7 @@ section.hornillo {
     color: #ffffff;
 }
 
-section.jujuy {
+#jujuy {
     background-color: #98824c;
     padding: 15px;
     margin: 10px;
@@ -147,7 +147,7 @@ section.jujuy {
     color: #ffffff;
 }
 
-section.lista {
+#lista {
     background-color: #98824c;
     padding: 15px;
     margin: 10px;

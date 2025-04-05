@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="CSS\Style.css"> <!-- Vinculando el archivo CSS -->
+    <link rel="stylesheet" href="assets/CSS/Style.css"> 
 </head>
 <body>
-    <header >
+    <header > 
         <h1>Contactos</h1>
     </header>
-    <nav>
+    <nav> 
         <ul>
             <li><a href="Index.html">Inicio</a></li>
             <li><a href="museos.html">Museos</a></li>
@@ -21,17 +21,44 @@
     <main>
         <section>
             <h2>Envíanos tu mensaje</h2>
-            <form action="procesar_contacto.php" method="POST">
+            <form id="contac.form">
+                <!--form:Se utiliza para crear un formulario en una página web.
+                -->
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-
+                <!--label:Se utiliza para asociar una descripción con un elemento de formulario específico.
+                para mi es comp un cout=salida
+                El atributo for conecta la etiqueta (<label>) con un campo del formulario.
+                El valor de for tiene que coincidir con el id del input al que se refiere.-->
+                <input type="text" id="nombre" name="nombre" required> 
+                <!-- input: Permite recopilar información del usuario a través de diversos tipos
+                de campos de entrada. es como el cin=entrada
+                El atributo name le da un nombre a ese dato, que se usará cuando se envíe el formulario.
+                Es la clave con la que el servidor va a recibir el valor que el usuario escribió.-->
+                
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
                 <label for="email">Correo Electrónico:</label>
                 <input type="email" id="email" name="email" required>
+                
+                <label for="pais">Pais:</label>
+                <select name="pais" id="pais" required>
+                    <!-- Se utiliza para crear una lista desplegable en un formulario web. -->
+                    <option value="Ar">Argentina</option>
+                    <!-- La etiqueta option representa una opción en la lista desplegable. 
+                    El atributo value se utiliza para establecer el valor que se enviará al servidor cuando se envíe el formulario.
+                    El texto dentro de la etiqueta option se muestra al usuario.-->
+                    <option value="Br">Brasil</option>
+                    <option value="Ch">Chile</option>
+                    <option value="Ur">Uruguay</option>
+                </select>
 
                 <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea> 
+                <!-- Se utiliza para crear un área de texto multilínea en un formulario web. -->
 
-                <button type="submit">Enviar</button>
+                <button type="submit" onclick="enviarformulario()">Enviar</button> <!-- esto Crea un boton -->
+
+
             </form>
         </section>
     </main>
@@ -39,5 +66,22 @@
     <footer>
         <p>&copy; 2025 Cultura de Jujuy</p>
     </footer>
+    <script> // sentencia de programacion
+        function enviarformulario() //funcion que se ejecuta cuando se hace click en enviar
+        {
+            event.preventDefault(); //evita que el formulario se envie y que la pag se recargue
+            //obtiene los valores de los inputs
+            var apellido = document.getElementById ("apellido").value;
+            var nombre = document.getElementById ("nombre").value;
+            var email = document.getElementById ("email").value;
+            var pais = document.getElementById ("pais").value;
+            //Muestra los valores en la consola
+            console.log("Apellido: " + apellido);
+            console.log("Nombre: " + nombre);
+            console.log("Email: " + email);
+            console.log("Pais: " + pais);
+
+        }
+    </script>> 
 </body>
 </html>
